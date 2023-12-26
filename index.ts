@@ -1,8 +1,8 @@
-const server = Bun.serve({
-  port: 3000,
-  fetch(req) {
-    return new Response('Bun!')
-  },
-})
+import http from 'http'
+import app from './src/app'
 
-console.log(`Listening on http://localhost:${server.port} ...`)
+const port = process.env.PORT || 3000
+
+const server = http.createServer(app)
+
+server.listen(port)
