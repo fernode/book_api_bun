@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 
 services:
   mongo-express:
@@ -25,7 +25,7 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - /home/fernando/workspace/Docker/Volumes/MongoDB:/data/db
+      - ${DB_USER_VOLUME}
     networks:
       - mongo-compose-network
 
