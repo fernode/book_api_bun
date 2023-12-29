@@ -2,6 +2,12 @@
   "name": "api-bun",
   "module": "index.ts",
   "type": "module",
+  "version": "1.0.0",
+  "description": "An node js api using bun as a bundler and managing dependencies",
+  "author": {
+    "name": "Fernando Silva",
+    "email": "eusou@fernandosilva.dev"
+  },
   "scripts": {
     "start": "bun run index.ts",
     "dev": "bun --hot index.ts"
