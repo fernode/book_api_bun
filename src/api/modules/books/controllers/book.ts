@@ -19,7 +19,6 @@ export class BookController {
     res: express.Response,
   ): Promise<express.Response> {
     try {
-      console.log(req.body)
       await BookModel.create(req.body.book)
       return res.status(200).json({
         message: 'Book created successfully',
