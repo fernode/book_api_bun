@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { BookController } from '../../modules/books'
+import { BookController } from '../modules/books'
 const router = Router()
 
 const bookController = new BookController()
