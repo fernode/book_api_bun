@@ -19,6 +19,8 @@
                 "singleQuote": true,
                 "semi": false
             }
-        ]
+        ],
+        "@typescript-eslint/no-misused-promises": "off",
+        "@typescript-eslint/unbound-method": "off"
     }
 }
