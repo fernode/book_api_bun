@@ -1,14 +1,14 @@
-// generate express crud routes
-import express from 'express'
+import { Router } from 'express'
 
-import { BookController } from '../controllers'
-const router = express.Router()
+import { BookController } from '../../modules/books'
+const router = Router()
 
 const bookController = new BookController()
 
-router.get('/', bookController.index)
+router.get('/', bookController.showAllBooks)
+
 router.post('/', bookController.create)
+
 router.get('/:id', bookController.show)
-router.put('/:id', bookController.update)
 
 export default router
