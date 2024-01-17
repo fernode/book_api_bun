@@ -11,7 +11,7 @@ services:
       ME_CONFIG_MONGODB_PORT: 27017
       ME_CONFIG_MONGODB_ADMINUSERNAME: ${DB_ADMINUSER}
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${DB_ADMINPASS}
-      ME_CONFIG_MONGODB_URL: mongodb://${DB_ADMINUSER}:${DB_ADMINPASS}@mongo:27017/
+      ME_CONFIG_MONGODB_URL: mongodb://${DB_ADMINUSER}:${DB_ADMINPASS}@mongo:27017?authSource=admin
     links:
       - mongo
     networks:
@@ -22,6 +22,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${DB_ADMINUSER}
       MONGO_INITDB_ROOT_PASSWORD: ${DB_ADMINPASS}
+      MONGO_INITDB_BASICAUTH_USERNAME: ${DB_USER}
+      MONGO_INITDB_BASICAUTH_PASSWORD: ${DB_PASS}
     ports:
       - '27017:27017'
     volumes:
