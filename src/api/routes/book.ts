@@ -9,6 +9,6 @@ router.get('/', bookController.showAllBooks)
 
 router.post('/', bookController.create)
 
-router.get('/:id', bookController.show)
+router.get('/:id', bookController.findById)
 
 export default router

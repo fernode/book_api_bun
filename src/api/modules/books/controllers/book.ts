@@ -31,7 +31,7 @@ export class BookController {
     }
   }
 
-  public async show(
+  public async findById(
     req: express.Request,
     res: express.Response,
   ): Promise<Express.Response> {
