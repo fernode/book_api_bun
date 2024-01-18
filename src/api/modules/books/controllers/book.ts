@@ -36,8 +36,7 @@ export class BookController {
     res: express.Response,
   ): Promise<Express.Response> {
     try {
-      const { id } = req.params
-      const book = await BookModel.findById(id)
+      const book = await BookModel.findById(req.params.id)
 
       if (book === null) {
         return res.status(404).json({
