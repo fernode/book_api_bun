@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "bun run index.ts",
-    "dev": "bun --hot index.ts | bun run pino-pretty --colorizeObjects"
+    "dev": "bun --hot index.ts | bun run pino-pretty --colorizeObjects",
+    "watch": "bun test --watch | bun run pino-pretty --colorizeObjects"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
